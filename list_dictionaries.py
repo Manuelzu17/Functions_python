@@ -1,9 +1,9 @@
-def ordenar_por_edad(lista):
-    return sorted(lista, key=lambda x: x['edad'])
-personas = [
-    {'nombre': 'Juan', 'edad': 25},
-    {'nombre': 'Ana', 'edad': 30},
-    {'nombre': 'Pedro', 'edad': 20},
-    {'nombre': 'María', 'edad': 25}
+def sort_by_age(list):
+    return sorted(list, key=lambda x: x['age'])
+people = [
+    {'name': 'Juan', 'age': 25},
+    {'name': 'Ana', 'age': 30},
+    {'name': 'Pedro', 'age': 20},
+    {'name': 'María', 'age': 25}
 ]
-print(ordenar_por_edad(personas))
+print(sort_by_age(people))

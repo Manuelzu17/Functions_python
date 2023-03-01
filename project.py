@@ -1,24 +1,24 @@
 import random
 
-def jugar():
-    numero_aleatorio = random.randint(1, 100)
-    intentos = 0
+def play():
+    random_number = random.randint(1, 100)
+    attempts = 0
     while True:
-        intento = int(input("Adivina el número (entre 1 y 100): "))
-        intentos += 1
-        if intento == numero_aleatorio:
-            print("¡Felicidades! Adivinaste el número en", intentos, "intentos.")
-            jugar_de_nuevo()
+        guess = int(input("Guess the number (between 1 and 100): "))
+        attempts += 1
+        if guess == random_number:
+            print("Congratulations! You guessed the number in", attempts, "attempts.")
+            play_again()
             break
-        elif intento < numero_aleatorio:
-            print("El número es mayor.")
+        elif guess < random_number:
+            print("The number is higher.")
         else:
-            print("El número es menor.")
+            print("The number is lower.")
 
-def jugar_de_nuevo():
-    respuesta = input("¿Quieres jugar de nuevo? (s/n) ")
-    if respuesta == "s":
-        jugar()
+def play_again():
+    response = input("Do you want to play again? (y/n) ")
+    if response == "y":
+        play()
 
-print("Bienvenido al juego de adivinanza de números.")
-jugar()
+print("Welcome to the number guessing game.")
+play()

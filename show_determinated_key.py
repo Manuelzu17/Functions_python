@@ -1,11 +1,11 @@
-def palabras_con_todas_vocales(cadenas):
-    vocales = set('aeiou')
+def words_with_all_vowels(strings):
+    vowels = set('aeiou')
     result = []
-    for cadena in cadenas:
-        if all(v in cadena.lower() for v in vocales):
-            result.append(cadena)
+    for string in strings:
+        if all(v in string.lower() for v in vowels):
+            result.append(string)
     return result
 
 word_list = ["hello", "algorithm", "education", "aeroplane", "time", "outrageous", "unique", "orange", "jupiter"]
-vowel_words = palabras_con_todas_vocales(word_list)
+vowel_words = words_with_all_vowels(word_list)
 print(vowel_words)
